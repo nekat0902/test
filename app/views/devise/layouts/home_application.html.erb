@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SLOTHLIFE</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-main">
+          <div class="header-link-list">
+            <ul class="header-link">
+              <li><%= link_to 'Home', "/", id: 'home_top'%></li>
+              <li><%= link_to "Profile", "#profile_page"%></li>
+              <li><%= link_to "メディア", "#media_page"%></li>
+              <li><%= link_to "ブログ", articles_path%></li>
+              <li>広場</li>
+              <li>お問い合わせ</li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.margin-top-5{
+  margin-top: 5%;
+}
+.title{
+  font-size: 20px;
+}
+.bg-white{
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.title-color{
+  background-color: #B0E0E6;
+}
+.padding-bottom-15{
+  padding-bottom: 15px;
+}
+.time-left{
+  text-align: right;
+}
+a{
+  color: black;
+}
+a :hover{
+  color: grey;
+}
+.article-image{
+  width:100%;
+  height: 300px;
+  object-fit: cover;
+}
+.padding-15{
+  padding: 15px;
+}
+
+// Place all the styles related to the blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+body{
+  width: 100%;
+  background-color: black;
+}
+
+//header.
+#blog_header_top{
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: 1px 0 5px 1px #999;
+  margin: 10px auto;
+  border-radius: 20px;
+  //width: 1200px;
+}
+.blog_header_ul{
+ float:left;
+
+}
+.blog_header_ul li{
+  float:left;
+  padding-left: 10px;
+}
+.blog_header_ul a{
+  color: black;
+}
+.blog_header_ul  :hover{
+  color:grey;
+}
+#blog_header_main{
+ padding: 15px 0;
+ box-shadow: 1px 0 5px 1px #999;
+
+ background-color: white;
+ //width: 1200px;
+}
+.blog_sentence{
+  font-size: 30px;
+  text-shadow: 5px 5px 1px white;
+}
+.blog_header_link_list{
+  float:left;
+  font-family: italic;
+  font-size: 30px;
+}
+.blog_header_link_list li{
+  float: left;
+  padding-left: 20px;
+  text-shadow: 1px 1px 5px white;
+}
+.blog_header_link_list a{
+  color: black;
+}
+.blog_header_link :hover{
+  color: grey;
+}
+//blog_area
+#blog_area{
+  text-align: center;
+  margin :auto;
+  margin-bottom: 20px;
+  //width:100%;
+  padding: 0;
+
+}
+//blog_left
+
+//blog_index
+#blog_index{
+  margin-top: 10px;
+  box-shadow: 1px 0 5px 1px #999;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding-bottom: 20px;
+}
+//blog
+//blog_index_header
+.blog_index_header{
+  background-color: #66CCFF;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  box-shadow: 1px 0 5px 1px #999;
+}
+//blog_post_item
+.blog_post_item{
+  border-bottom: 1px solid #DDDDDD;
+}
+.blog_container{
+ margin: auto ;
+ padding: 0 15px;
+}
+.clear_none{
+  clear:none;
+}
+.clear_both{
+  clear: both;
+}
+.clear_left{
+  clear:left;
+}
+.pagination{
+  font-size: 30px;
+}
+.article-list-image{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.relative{
+  position: relative;
+}
+.camera-font{
+  position:absolute;
+  top: 228px;
+  left: 540px;
+  font-size: 60px;
+  color:white;
+}
+.color-white{
+  color: white;
+}
+.color-white a{
+  color: white!important;
+}
+.bg-black{
+  background-color: black;
+}
+.display-inline-block{
+  display: inline-block;
+}
+.width-50{
+  width: 50%;
+}
+.padding-left-15{
+  padding-left: 15px;
+}
+
+#article_image{
+  display:none;
+}
+.border1{
+  border-top: dashed 1px black;
+}
+.padding-top-10{
+  padding-top: 10px;
+}

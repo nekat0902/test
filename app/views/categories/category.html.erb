@@ -1,0 +1,27 @@
+<div class="title-color">
+  <h1 class="text-center" style="margin:0; padding:10px; width:100% ">Top</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <% @articles.each do |article | %>
+      <%= link_to article do %>
+        <div class="col-md-4 margin-top-5">
+          <div class="bg-white">
+            <% if article.image_id.present?%>
+            <%= image_tag attachment_url(article, :image), class: 'img-responsive article-list-image', align: "left"%>
+            <%else%>
+            <%= image_tag '1.jpg', class: 'img-responsive article-list-image' %>
+            <%end%>
+            <div class="padding-bottom-15">
+              <p class="title"><%= article.title %></p>
+              <%if article.category.present?%>
+              <p class="text-center"><span class="badge badge-secondary">#<%=article.category.category_name%></span></p>
+              <%end%>
+              <span class="time-left"><%= article.created_at.strftime("%Y年%m月%d日") %></span>
+            </div>
+          </div>
+        </div>
+        <%end%>
+    <%end%>
+  </div>
+  <%= paginate @articles , class: 'font-size-30'%>

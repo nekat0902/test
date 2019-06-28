@@ -1,0 +1,29 @@
+<div class="container">
+      <div class="col-md-12 margin-top-5 ">
+        <div class="<!--bg-white--> padding-15">
+          <!--<%= image_tag '1.jpg', class: 'article-image' %>-->
+          <% if @article.image_id.present?%>
+          <%= image_tag attachment_url(@article, :image), class: 'article-image' %>
+          <%else%>
+          <%= image_tag '1.jpg', class: 'article-image' %>
+          <%end%>
+          <h1><%=@article.title%></h1>
+          <div class="padding-bottom-15">
+            <p class="title"><%= @article.body.html_safe %></p>
+            <%if @article.category.present?%>
+            <p class="text-left"><span class="badge badge-secondary">#<%=@article.category.category_name%></span></p>
+            <%end%>
+            <p class="text-right">
+              <%= @article.created_at.strftime("%Y年%m月%d日") %>
+            </p>
+          </div>
+          <% if current_user.try(:admin?) %>
+          <%= link_to '編集', edit_article_path(@article), class: 'btn btn-primary'%>
+          <%= link_to '削除', article_path(@article), method: :delete, data: {confirm: '削除してもよろしいですか？'}, class: 'btn btn-danger'%>
+          <%end%>
+        </div>
+      </div>
+      <div class="">
+
+      </div>
+</div>

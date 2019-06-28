@@ -1,0 +1,71 @@
+ <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@3.0.0-beta.1//js/froala_editor.pkgd.min.js"></script>-->
+<%= form_for article do |f| %>
+  <div class="form-group padding-15" id="cover_image">
+    <%= image_tag 'grey-bg.jpg', class: 'img-responsive article-image relative'%>
+    <i class="fa fa-camera camera-font" aria-hidden="true" style="font-size:50px "></i>
+
+  </div>
+
+  <%= f.attachment_field :image %>
+
+
+<div class="form-group padding-15">
+  <%= f.label :category_id, 'カテゴリー' %><br>
+  <%=f.collection_select :category_id, Category.all, :id, :category_name%>
+
+</div>
+<div class="form-group　padding-15">
+  <%= f.label :title, 'タイトル' %>
+  <%=f.text_field :title, class: 'form-control', placeholder: 'タイトルを入力してください' %>
+</div>
+<div class="form-group">
+  <%= f.label :body, '本文' %>
+  <textarea rows="10" class="form-control" name="article[body]" id="article_body" style="display: none;"></textarea>
+</div>
+<%=f.submit class: 'btn btn-success'%>
+<%end%>
+<!-- Include external JS libs. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@2.9.5/js/froala_editor.pkgd.min.js"></script>
+
+<!-- Initialize the editor. -->
+<script>
+  $(function()
+    { $('textarea').froalaEditor()
+
+      });
+    </script>
+    <script>
+    new FroalaEditor('#edit', {
+      // Set the image upload URL.
+      imageUploadURL: '/upload_image',
+
+      imageUploadParams: {
+        id: 'my_editor'
+      }
+    })
+  </script>
+  <script>
+    new FroalaEditor('#edit', {
+      // Set the video upload URL.
+      videoUploadURL: '/upload_video',
+
+      videoUploadParams: {
+        id: 'my_editor'
+      }
+    })
+  </script>
+<script>
+  new FroalaEditor('#edit', {
+    // Set the file upload URL.
+    fileUploadURL: '/upload_file',
+
+    fileUploadParams: {
+      id: 'my_editor'
+    }
+  })
+</script>
