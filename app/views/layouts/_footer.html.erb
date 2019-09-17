@@ -1,16 +1,6 @@
 <div class="container">
-  <div class="archives display-inline-block width-50">
-    <h2>Blog Archive</h2>
-    <ul class="navbar-nav nav">
-      <li class="nav-item dropright ">
-        <a href="#" class="dropdown-toggle color-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">2019<span class="caret"></span></a>
-        <ul class="dropdown-menu bg-black color-white">
-	         <% article_months.sort.reverse.each do |month, articles| %>
-	         <li><h3 class="padding-left-15"><%= link_to month.strftime("%Y年%m月"), article_archive_path(articles) %></h3></li>
-	         <% end %>
-       </ul>
-      </li>
-    </ul>
+  <div class="display-inline-block width-50">
+
   </div>
   <div class="display-inline-block width-50">
     <div class="form-group">

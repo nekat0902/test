@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  
+  layout "login_application"
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -12,8 +12,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
    def create
-     puts "=============="
      super
+     if resource
+       #resource == user
+       profile = Profile.new
+       profile.user_id = resource.id
+       profile.name = params[:profile][:name]
+       profile.save
+     end
+     puts "=======#{params[:profile][:name]}======="
+
    end
 
   # GET /resource/edit

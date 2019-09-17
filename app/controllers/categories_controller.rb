@@ -1,12 +1,10 @@
 class CategoriesController < ApplicationController
-  
-
+  layout "blog_application"
     before_action :archives
     PER = 18
 
   def category
     @articles = Article.where(category_id: params[:category_id]).order(created_at: :desc).page(params[:page]).per(PER)
-
   end
 
   def archive

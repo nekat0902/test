@@ -1,48 +1,89 @@
 <header>
-  <div id="blog_header_top" class="container text-center">
+  <div id="blog_header_top">
+    <p class="notice alert-dark"><%= notice %></p>
+    <p class="alert alert-primary"><%= alert %></p>
     <ul class="blog_header_ul">
       <li><%=link_to("HOME","/")%></li>
       <!--<li><%=link_to("広場","/")%></li>-->
     </ul>
+    <i class="fa fa-bars" aria-hidden="true"></i>
     <div class="clear_left"></div>
-  </div>
+
 
   <div id="blog_header_main" class="container text-center">
     <div class="blog_sentence">
-      <h1 class="text-center">暇を持て余した神々の嘆きブログ</h1>
+      <h1 class="text-center font-size-30 margin-top-40">暇を持て余した<br class="title-br">神々の嘆きブログ</h1>
     </div>
 
-   <div class="navbar-dark bg-dark" id="navbarSupportedContent">
-      <ul class="nav  navbar-nav">
-        <li class="nav-item">
-          <%= link_to "top", articles_path, class: "nav-link active" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "当ブログについて", category_about_path%>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">カテゴリ <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-           <li><%= link_to "勉強", category_path(category_id: 1) %></li>
-           <li><%=link_to "筋トレ", category_path(category_id: 3)%></li>
-           <!--<li role="separator" class="divider"></li>-->
-           <!--<li class="dropdown-header">header</li>-->
-           <li><%= link_to "その他", category_path(category_id: 2)%></li>
-           <li><%= link_to "健康", category_path(category_id: 4)%></li>
-         </ul>
-        </li>
-        <% if current_user.try(:admin?) %>
-        <li class="nav-item"><%= link_to "新規作成", new_article_path, class: "nav-link" %></li>
-        <li class="nav-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
-        <%elsif current_user%>
-        <li class="nav-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
-        <%else%>
-        <li class="nav-item "><%= link_to "ユーザー登録", new_user_registration_path, class: "nav-link" %></li>
-        <li class="nav-item "><%= link_to "ログイン", new_user_session_path, class: "nav-link" %></li>
-        <%end%>
-      </ul>
-
-
+   <div class="margin-top-1" id="navbarSupportedContent">
+       <ul class="text-center">
+         <li class="li-1 color-white">
+           <%= link_to "TOP", articles_path, class: "nav-link active" %>
+         </li>
+         <li class="li-1 color-white">
+           <%= link_to "ABOUT", category_about_path%>
+         </li>
+         <li class="li-1 dropdown color-white">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORY<span class="caret"></span></a>
+           <ul class="dropdown-menu color-black">
+            <li><%=link_to "勉強", category_path(category_id: 1) %></li>
+            <li><%=link_to "筋トレ", category_path(category_id: 3)%></li>
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li class="dropdown-header">header</li>-->
+            <li><%= link_to "その他", category_path(category_id: 2)%></li>
+            <li><%= link_to "健康", category_path(category_id: 4)%></li>
+          </ul>
+         </li>
+         <% if current_user.try(:admin?) %>
+         <li class="li-1 color-white"><%= link_to "NEW ARTICLE", new_article_path, class: "nav-link" %></li>
+         <li class="li-1 color-white"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+         <%elsif current_user%>
+         <li class="li-1 color-white"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+         <%else%>
+         <li class="li-1 color-white"><%= link_to "CREATE ACCOUNT", new_user_registration_path, class: "nav-link" %></li>
+         <li class="li-1 color-white"><%= link_to "LOGIN", new_user_session_path, class: "nav-link" %></li>
+         <%end%>
+       </ul>
+       <div class="clear_left"></div>
+    </div>
+  <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+        <div class="margin-top-1" id="navbarSupportedContent1">
+            <ul class="text-left">
+              <li class="color-white padding-bottom-15">
+                <%= link_to "TOP", articles_path, class: "nav-link active" %>
+              </li>
+              <li class="color-white padding-bottom-15">
+                <%= link_to "ABOUT", category_about_path%>
+              </li>
+              <li class="dropdown color-white padding-bottom-15">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORY<span class="caret"></span></a>
+                <ul class="dropdown-menu color-black">
+                 <li><%=link_to "勉強", category_path(category_id: 1) %></li>
+                 <li><%=link_to "筋トレ", category_path(category_id: 3)%></li>
+                 <!--<li role="separator" class="divider"></li>-->
+                 <!--<li class="dropdown-header">header</li>-->
+                 <li><%= link_to "その他", category_path(category_id: 2)%></li>
+                 <li><%= link_to "健康", category_path(category_id: 4)%></li>
+               </ul>
+              </li>
+              <% if current_user.try(:admin?) %>
+              <li class="color-white padding-bottom-15"><%= link_to "NEW ARTICLE", new_article_path, class: "nav-link" %></li>
+              <li class="color-white padding-bottom-15"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+              <%elsif current_user%>
+              <li class="color-white padding-bottom-15"><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+              <%else%>
+              <li class="color-white padding-bottom-15"><%= link_to "CREATE ACCOUNT", new_user_registration_path, class: "nav-link" %></li>
+              <li class="color-white padding-bottom-15"><%= link_to "LOGIN", new_user_session_path, class: "nav-link" %></li>
+              <%end%>
+            </ul>
+            <div class="clear_left"></div>
+         </div>
+      </div>
+  </div>
     </div>
   </div>
   </header>

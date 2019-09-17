@@ -1,62 +1,25 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.margin-top-5{
-  margin-top: 5%;
-}
-.title{
-  font-size: 20px;
-}
-.bg-white{
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0,0,0,.3);
-}
-.title-color{
-  background-color: #B0E0E6;
-}
-.padding-bottom-15{
-  padding-bottom: 15px;
-}
-.time-left{
-  text-align: right;
-}
-a{
-  color: black;
-}
-a :hover{
-  color: grey;
-}
-.article-image{
-  width:100%;
-  height: 300px;
-  object-fit: cover;
-}
-.padding-15{
-  padding: 15px;
-}
+
 
 // Place all the styles related to the blog controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  vertical-align: baseline;
-}
+
+
+
 body{
   width: 100%;
   background-color: black;
+  box-sizing: border-box;
 }
 
 //header.
 #blog_header_top{
-  background-color: rgba(0,0,0,0.5);
-  box-shadow: 1px 0 5px 1px #999;
-  margin: 10px auto;
-  border-radius: 20px;
-  //width: 1200px;
+  background-image: url("/bg2.jpg");
+  background-size: cover;
+  height: 300px;
 }
 .blog_header_ul{
  float:left;
@@ -73,15 +36,11 @@ body{
   color:grey;
 }
 #blog_header_main{
- padding: 15px 0;
- box-shadow: 1px 0 5px 1px #999;
 
- background-color: white;
- //width: 1200px;
 }
 .blog_sentence{
   font-size: 30px;
-  text-shadow: 5px 5px 1px white;
+  color: white;
 }
 .blog_header_link_list{
   float:left;
@@ -104,23 +63,27 @@ body{
   text-align: center;
   margin :auto;
   margin-bottom: 20px;
-  //width:100%;
   padding: 0;
-
 }
-//blog_left
-
 //blog_index
 #blog_index{
-  margin-top: 10px;
-  box-shadow: 1px 0 5px 1px #999;
+  margin-top: 20px;
+  //box-shadow: 1px 0 5px 1px #999;
   width: 100%;
   overflow: hidden;
-  background-color: white;
+  //background-color: white;
   padding-bottom: 20px;
 }
 //blog
 //blog_index_header
+.font-family1{
+  font-family: cursive;
+  font-size: 60px;
+  letter-spacing: 20px;
+  color: #fff;
+    text-shadow: 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555, -1px -1px 1px #555, 1px 1px 1px #555, -1px 1px 1px #555, 1px -1px 1px #555, -1px -1px 1px #555, 5px 5px #9ccc65;
+    transform: rotate(-15deg);
+}
 .blog_index_header{
   background-color: #66CCFF;
   text-align: center;
@@ -163,31 +126,321 @@ body{
   font-size: 60px;
   color:white;
 }
-.color-white{
-  color: white;
-}
-.color-white a{
-  color: white!important;
-}
-.bg-black{
-  background-color: black;
-}
+
 .display-inline-block{
   display: inline-block;
 }
 .width-50{
   width: 50%;
 }
-.padding-left-15{
-  padding-left: 15px;
-}
+
 
 #article_image{
   display:none;
 }
-.border1{
-  border-top: dashed 1px black;
-}
+
 .padding-top-10{
   padding-top: 10px;
+}
+.font-size-30{
+  font-size: 50px;
+}
+//padding
+.padding-left-15{
+  padding-left: 15px;
+}
+.padding-15{
+  padding: 15px;
+}
+.padding-bottom-15{
+  padding-bottom: 15px;
+}
+.padding-bottom-10{
+  padding-bottom: 10px;
+}
+//margin
+.margin-top-1{
+  margin-top: 100px;
+}
+.margin-top-40{
+  margin-top: 40px;
+}
+.margin-top-5{
+  margin-top: 5%;
+}
+.margin-15{
+  margin-top:15px;
+}
+
+//bg or color
+.color-white{
+  color: white;
+}
+.color-white a{
+  color: white!important;
+}
+.color-black a{
+  color:black!important;
+}
+.bg-black{
+  background-color: black;
+}
+.li-1{
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 10px;
+  font-family: cursive;
+  color: white;
+  transition: all 1s ease;
+}
+.li-1:hover{
+  font-size: 30px;
+}
+
+
+.title-br{
+  display: none;
+}
+
+.fa-bars{
+  display: none!important;
+}
+
+.title{
+  font-size: 20px;
+}
+.bg-white{
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+.title-color{
+  background-color: #B0E0E6;
+}
+
+.time-left{
+  text-align: right;
+}
+a{
+  color: black;
+}
+a :hover{
+  color: grey;
+}
+.article-image{
+  width:100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+//@media
+@media (max-width: 768px){
+  .blog_sentence h1{
+    font-size:30px;
+  }
+  .margin-top-1{
+    margin-top: 80px;
+  }
+  .title-br{
+    display:block;
+  }
+  .fa-bars{
+    display: block;
+  }
+  #nav-drawer {
+
+    display: inline-block;
+    position: fixed;
+  }
+  #navbarSupportedContent1{
+    display: inline-block;
+  }
+  #navbarSupportedContent{
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px){
+  #navbarSupportedContent{
+    display: block;
+  }
+  #nav-drawer {
+    position: relative;
+    display: none;
+  }
+}
+.border-1{
+  border-bottom: 1px dashed #DDDDDD
+}
+// Login or Registration
+.bg-login{
+  background-image: url("/bg-login.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+.login-form{
+  background: #f1f1f1;
+  height: 580px;
+  padding: 80px 40px;
+  width: 360px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-text{
+  font-weight:bold;
+  font-size: 30px;
+}
+.login-btn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: linear-gradient(90deg, #336633,#999966);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.login-btn:hover,.registrations-btn:hover{
+  background-position: right;
+  color: #FFFFEE;
+}
+.registrations-btn{
+  display: block;
+  width:100%;
+  height: 50px;
+  border: none;
+  background: linear-gradient(90deg, #BAD3FF,#B1F9D0);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+.login-btn2 {
+  display: block;
+  background-size: 200%;
+  background: linear-gradient(90deg, #336633,#999966);
+  color: #fff;
+  outline: none;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+.registrations-btn2{
+  display: block;
+  background-size: 200%;
+  background: linear-gradient(90deg, #BAD3FF,#B1F9D0);
+  color: #fff;
+  outline: none;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+.login-btn2:hover,.registrations-btn2:hover{
+  background-position: right;
+
+}
+.dis-inblo{
+  display: inline-block;
+}
+.login-top-btn{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: all 1s ease
+}
+.login-top-btn:hover{
+  font-size: 30px;
+}
+
+#nav-drawer {
+  position: relative;
+  position: absolute;
+  top:10px;
+  right:15px;
+  background-color: grey;
+  padding:10px;
+  border-radius: 15px;
+  position: fixed;
+  z-index: 10;
+}
+
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 30px;/*長さ*/
+  border-radius: 3px;
+  background: white;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+#nav-open:hover span, #nav-open:hover span:before, #nav-open:hover span:after{
+  background: black;
+}
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: grey;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }

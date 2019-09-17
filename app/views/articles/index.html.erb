@@ -1,6 +1,4 @@
-<div class="title-color">
-  <h1 class="text-center" style="margin:0; padding:10px; width:100% ">Top</h1>
-</div>
+<h1 class="text-center font-family1" style="margin:0; padding:10px; width:100% ">Top</h1>
 <div class="container">
   <div class="row">
 
@@ -15,12 +13,10 @@
             <%end%>
             <div class="padding-bottom-15">
               <p class="title"><%= article.title %></p>
-              <div class="border1">
                 <%if article.category.present?%>
-                <p class="text-center padding-top-10"><span class="badge badge-secondary">#<%=article.category.category_name%></span></p>
+                <p class="text-center padding-top-10 padding-bottom-10"><span class="badge badge-secondary">#<%=article.category.category_name%></span></p>
                 <%end%>
                 <span class="time-left"><%= article.created_at.strftime("%Y年%m月%d日") %></span>
-              </div>
             </div>
           </div>
         </div>

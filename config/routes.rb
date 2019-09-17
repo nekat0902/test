@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
+
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => {
    :registrations => 'users/registrations',
    :sessions => 'users/sessions'
   }
-
- resources :articles
+ resources :articles do
+   resources :comments
+ end
   #root "articles#index"
   get "/categories/about" => "categories#about", as: :category_about
 
-  get "/articles/:id/archive" => "articles#archive", as: :article_archive
+
+  #get "/articles/:id/archive" => "articles#archive", as: :article_archive
   get "/categories/category_id" => "categories#category", as: :category
 
 

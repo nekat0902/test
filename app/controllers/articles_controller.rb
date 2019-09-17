@@ -1,8 +1,9 @@
 
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
   layout 'blog_application'
-  before_action :archives
+  #before_action :archives
   PER = 18
 
 
@@ -14,7 +15,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
+    @comments = @article.comments
+    @comment = Comment.new
   end
 
   def new
@@ -49,9 +51,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def archive
-    @archives = Article.where(id: params[:id]).order(created_at: :desc).page(params[:page]).per(PER)
-  end
+#  def archive
+#  @archives = Article.where(id: params[:id]).order(created_at: :desc).page(params[:page]).per(PER)
+#  end
 
 
 
@@ -61,10 +63,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-  def archives
-    @articles = Article.all
-    @article_months = @articles.group_by { |t| t.created_at.beginning_of_month}
-  end
+  #def archives
+  #  @articles = Article.all
+  #  @article_months = @articles.group_by { |t| t.created_at.beginning_of_month}
+  #end
 
 
   def article_params

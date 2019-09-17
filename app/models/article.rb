@@ -6,5 +6,6 @@ class Article < ApplicationRecord
   attachment :image
 
   belongs_to :category
-
+  
+  has_many :comments
 end
