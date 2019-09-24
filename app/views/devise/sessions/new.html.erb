@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="login-form">
+    <%= link_to 'Top', articles_path(@article), class:'login-top-btn'%>
+<h2 class="text-center padding-bottom-15 login-text">ログイン</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group padding-bottom-15">
+    <%= f.label :email, 'メールアドレス' ,class: 'padding-bottom-10'%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: 'form-control', placeholder: 'Email-Adress'%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password , 'パスワード' ,class: 'padding-bottom-10'%><br/>
+    <%= f.password_field :password, autocomplete: "current-password" , class: 'form-control', placeholder: 'Password'%>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="form-group">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン", class: 'btn login-btn'%>
+  </div>
+<% end %>
+<p class="margin-top-40">新規登録する方はこちら</p>
+<%= render "devise/shared/links" %>
+</div>
+</div>
