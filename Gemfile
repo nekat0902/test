@@ -9,8 +9,12 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 gem 'sqlite3', '~> 1.3.6', group: :development
 gem 'pg', group: :production
+=======
+gem 'sqlite3', '~> 1.3.6'
+>>>>>>> 27b39a79bc556885ef4de3734f333e155dc07a5b
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -65,7 +69,10 @@ gem "font-awesome-rails"
 gem 'devise'
 #
 gem 'rails_admin', '~>1.3'
+<<<<<<< HEAD
 gem 'cancancan', '~> 2.0'
+=======
+>>>>>>> 27b39a79bc556885ef4de3734f333e155dc07a5b
 #kaminari
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
