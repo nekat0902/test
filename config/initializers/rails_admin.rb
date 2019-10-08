@@ -3,7 +3,7 @@ RailsAdmin.config do |config|
   ### Popular gems integration
 
   ## == Devise ==
-<<<<<<< HEAD
+
    config.authenticate_with do
      warden.authenticate! scope: :user
    end
@@ -11,7 +11,7 @@ RailsAdmin.config do |config|
 
   ## == Cancan ==
    config.authorize_with :cancan
-=======
+
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
   # end
@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
 
   ## == Cancan ==
   # config.authorize_with :cancan
->>>>>>> 27b39a79bc556885ef4de3734f333e155dc07a5b
+
 
   ## == Pundit ==
   # config.authorize_with :pundit
