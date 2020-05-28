@@ -70,7 +70,7 @@ gem 'rails_admin', '~>1.3'
 gem 'cancancan', '~> 2.0'
 
 #kaminari
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'kaminari-bootstrap', '~> 3.0.1'
 #Bootstrap responsive
 gem 'bootstrap_jt', '~> 0.1.0'
